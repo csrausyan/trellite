@@ -1,0 +1,44 @@
+<h2>Login</h2>
+
+<?php 
+use Phalcon\Tag; 
+
+echo $this->tag->linkTo([
+    "index",
+    '<i class="fa fa-sign-out" aria-hidden="true"></i> Back to menu',
+    "class" => "btn btn-secondary"
+]); 
+
+echo $this->tag->form("login/login"); 
+?>
+
+    <p><?php echo $this->flashSession->output(); ?></p>
+    <p><?php echo $this->flash->output(); ?></p>
+
+    <div class="form-group">
+        <label for="email">E-Mail</label>
+        <?php echo $this->tag->emailField([
+            "tre_email",
+            "class" => "form-control",
+        ]); ?>
+    </div>
+
+    <div class="form-group">
+        <label for="password">Password</label>
+        <?php echo Tag::passwordField([
+            'tre_password',
+            'size' => '30',
+            "class" => "form-control",
+        ])?>
+    </div>
+
+    <p>
+        <?php echo $this->tag->submitButton([
+            "login",
+            'class' => 'btn btn-primary'
+        ]); ?>
+    </p>
+
+</form>
+
+<p><?php echo $this->tag->linkTo('signup/','Sign Up Here!'); ?></p>

@@ -1,0 +1,16 @@
+<?php 
+    echo $this->session->get('AUTH_USERNAME');
+    echo $this->session->get('AUTH_ID');
+    
+        echo $this->tag->linkTo([
+            "tre_user/logout",
+            '<i class="fa fa-sign-out" aria-hidden="true"></i> Logout',
+            "class" => "btn btn-danger"
+        ]);
+
+    
+?>
+
+<div class="center-block">
+    <?php echo $this->getContent(); ?>
+</div>

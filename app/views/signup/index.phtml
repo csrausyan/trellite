@@ -1,0 +1,46 @@
+<h2>Sign up using this form</h2>
+
+<?php use Phalcon\Tag; echo $this->tag->form("signup/register"); ?>
+
+<?php echo $this->tag->linkTo([
+            "index",
+            '<i class="fa fa-sign-out" aria-hidden="true"></i> back',
+            "class" => "btn btn-secondary"
+        ]); ?>
+
+    <div class="form-group">
+        <label for="name">Name</label>
+        <?php echo $this->tag->textField([
+            "tre_username",
+            "class" => "form-control",
+            "placeholder"=> "Enter your name here"
+        ]); ?>
+    </div>
+
+    <div class="form-group">
+        <label for="email">E-Mail</label>
+        <?php echo $this->tag->emailField([
+            "tre_email",
+            "class" => "form-control",
+            "placeholder"=> "Enter your email here"
+        ]); ?>
+    </div>
+
+    <div class="form-group">
+        <label for="password">Password</label>
+        <?php echo Tag::passwordField([
+            'tre_password',
+            'size' => '30',
+            "class" => "form-control",
+            "placeholder"=> "Enter your password here"
+        ])?>
+    </div>
+
+    <p>
+        <?php echo $this->tag->submitButton([
+            "Register",
+            'class' => 'btn btn-primary'
+        ]); ?>
+    </p>
+
+</form>

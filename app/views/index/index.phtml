@@ -1,0 +1,44 @@
+<!-- <div class="page-header">
+    <h1>Congratulations!</h1>
+</div> -->
+
+<p><?php echo $this->flashSession->output(); ?></p>
+<p><?php echo $this->flash->output(); ?></p>
+
+<!-- <p>You're now flying with Phalcon. Great things are about to happen!</p>
+
+<p>This page is located at <code>views/index/index.phtml</code></p> -->
+
+<h1>Trellite</h1>
+<?php
+
+// echo "<h1>Hello!</h1>";
+echo PHP_EOL;
+echo PHP_EOL;
+// echo $this->tag->linkTo('signup/','Sign Up Here!');
+
+echo $this->tag->linkTo([
+    "signup/",
+    '<i class="fa fa-sign-out" aria-hidden="true"></i> Sign Up',
+    "class" => "btn btn-success"
+]);
+
+echo PHP_EOL;
+echo PHP_EOL;
+
+// echo $this->tag->linkTo('login', 'Login Here!');
+echo $this->tag->linkTo([
+    "login/",
+    '<i class="fa fa-sign-out" aria-hidden="true"></i> Login',
+    "class" => "btn btn-primary"
+]);
+
+echo PHP_EOL;
+echo PHP_EOL;
+echo PHP_EOL;
+?>
+
+<br>
+<br>
+<br>
+<p>Trellite is a simple web-app based on phalcon for to-do list</p>
